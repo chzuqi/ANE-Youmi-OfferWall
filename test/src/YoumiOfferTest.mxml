@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" applicationDPI="160">
+	
+	<fx:Script>
+		<![CDATA[
+			import net.youmi.ane.YoumiExtension;
+			protected function button1_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				YoumiExtension.getInstance();
+				YoumiExtension.YoumiInit(appkey.text, appsecret.text);
+			}
+			
+			protected function button2_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				YoumiExtension.YoumiShowOfferWall(1);
+			}
+			
+			protected function button3_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				YoumiExtension.YoumiShowOfferWall(0);
+			}
+			
+			protected function button4_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				YoumiExtension.YoumiShowSpot();
+			}
+			
+			protected function button5_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				point.text = YoumiExtension.YoumiQueryPoint().toString();
+			}
+			
+			protected function button6_clickHandler(event:MouseEvent):void
+			{
+				// TODO Auto-generated method stub
+				YoumiExtension.YoumiSpendPoints(1);
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	<s:Button x="10" y="52" width="300" label="init" click="button1_clickHandler(event)"/>
+	<s:TextInput id="appkey" x="10" y="11" width="150" prompt="appkey" text="6c3a5d323470ae7e"/>
+	<s:TextInput id="appsecret" x="160" y="11" width="150" prompt="appsecret" text="f7113a234dc1455b"/>
+	<s:Button x="10" y="103" width="300" label="offer wall" click="button2_clickHandler(event)"/>
+	<s:Button x="10" y="158" width="300" label="show wall" click="button3_clickHandler(event)"/>
+	<s:Button x="9" y="214" width="300" label="showSpot" click="button4_clickHandler(event)"/>
+	<s:TextInput id="point" x="231" y="265" width="79" height="45"/>
+	<s:Button x="10" y="318" width="213" label="spend 1 Points" click="button6_clickHandler(event)"/>
+	<s:Button x="10" y="267" width="213" label="query point" click="button5_clickHandler(event)"/>
+</s:Application>

@@ -1,0 +1,32 @@
+<extension xmlns="http://ns.adobe.com/air/extension/4.0">
+  <id>net.youmi.extension</id>
+  <versionNumber>1</versionNumber>
+  <platforms>
+    <platform name="iPhone-ARM">
+        <applicationDeployment>
+            <nativeLibrary>libYoumiOfferWall.a</nativeLibrary>
+            <initializer>YoumiOfferWallExtInitializer</initializer>
+            <finalizer>YoumiOfferWallExtFinalizer</finalizer>
+        </applicationDeployment>
+    </platform>
+    <platform name="iPhone-x86">
+        <applicationDeployment>
+            <nativeLibrary>libYoumiOfferWall.a</nativeLibrary>
+            <initializer>YoumiOfferWallExtInitializer</initializer>
+            <finalizer>YoumiOfferWallExtFinalizer</finalizer>
+        </applicationDeployment>
+    </platform>
+
+    <!--<platform name="Android-ARM">
+        <applicationDeployment> 
+            <nativeLibrary>libYoumiOfferWall.jar</nativeLibrary>
+            <initializer>cn.domob.ane.YoumiExtension</initializer>
+            <finalizer>cn.domob.ane.YoumiExtension</finalizer>
+        </applicationDeployment> 
+    </platform>-->
+    
+    <platform name="default"> 
+        <applicationDeployment/> 
+    </platform> 
+  </platforms>
+</extension>
