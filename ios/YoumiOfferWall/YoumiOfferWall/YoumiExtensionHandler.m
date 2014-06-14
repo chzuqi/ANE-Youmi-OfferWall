@@ -118,7 +118,7 @@
 - (FREObject)spendPoints:(FREObject)frePoint
 {
     NSInteger point =  [self.converter FREGetObjectAsInteger:frePoint];
-    [YouMiPointsManager spendPoints:10];
+    [YouMiPointsManager spendPoints:point];
     return NULL;
 }
 
